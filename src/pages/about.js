@@ -12,9 +12,15 @@ const About =({ data }) => {
         
     <Layout>
       
-            <div class="container pady10">
-                <h1>{about.title}</h1>
-                <RichText content={about.body} />
+            <div className="Abouthero">
+                <div className="intro">
+                    <h1>{about.title}</h1>
+                    <RichText content={about.body} />
+                </div>
+                <div className="about-right-block">
+
+                </div>
+                
             </div>
 
     </Layout>

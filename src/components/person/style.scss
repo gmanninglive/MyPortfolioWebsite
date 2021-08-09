@@ -1,0 +1,20 @@
+#head{ animation: head 0.7s infinite cubic-bezier(.51,-0.05,.71,.68) ;
+    transform-origin: center;
+    transform-box: fill-box;
+
+}
+@keyframes head {
+    
+    
+     from{
+        
+        transform: rotateZ(0deg);
+      }
+      
+      to {
+        transform: rotateZ(-8deg);
+      }
+    
+      
+
+}

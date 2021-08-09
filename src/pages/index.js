@@ -1,23 +1,21 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { graphql } from 'gatsby';
+
 import {SiJavascript, 
         SiNodeDotJs, 
         SiGatsby, 
         SiNextDotJs, 
-        SiReact, SiCsharp} from 'react-icons/si';
+        SiReact, SiCsharp,
+        } from 'react-icons/si';
 
 
 import '../utils/global.scss';
 import Layout from '../layouts/Layout';
 import Cards from '../components/portfolio/Cards';
+import Person from '../components/person/personcoding';
 
 
 const index = ({ data }) =>{
-
-  // const portfolioCases = data.allContentfulPortfolio;
-
-
  
   return (
     <Layout>
@@ -29,28 +27,37 @@ const index = ({ data }) =>{
               <p>Check out my portfolio below 👇</p>
               </span>
               <span className="heroRightBlock">
+                
+                
               </span>
            
            </div>
             <div className="portfolioContainer">
+              <div className="case-study-container">
+              <h1 className="casestudytext3">PORTFOLIO</h1>
+                <h1 className="casestudytext2">CASE STUDIES</h1>
+                <h1 className="casestudytext">CASE STUDIES</h1>
+                <h1 className="casestudytext4">CASE STUDIES</h1>
+                
+            </div><div className="portfoliocards-container">
            <Cards portfolioCases={data.allContentfulPortfolio.edges} />
-           </div>
+           </div></div>
+
            <div className="skillsContainer">
-             <div className="skills-title"><h2>Skills & Tech</h2></div>
-             <div className="skills-list">
-               
-               <div className="item-1"><SiNodeDotJs /></div>
-               <div className="item-2"><SiJavascript /></div>
-               <div className="item-3"><SiReact /></div>
-               <div className="item-4"><SiGatsby /></div>
-               <div className="item-5"><SiNextDotJs /></div>
-               <div className="item-6"><SiCsharp /></div>
-             
-            </div>
-             
+             <div className="skills-title">
+               <h2>Skills & Tech</h2>
+                </div>
+                  <div className="skills-grid">
+                      <div className="item-1"><SiNodeDotJs color="#339933" size={48} /></div>
+                      <div className="item-2"><SiJavascript color="#F7DF1E" size={48} /></div>
+                      <div className="item-3"><SiReact color="#61DAFB" size={48} /></div>
+                      <div className="item-4"><SiGatsby color="#663399" size={48} /></div>
+                      <div className="item-5"><SiNextDotJs size={48} /></div>
+                      <div className="item-6"><SiCsharp size={48} /></div><div className="person">
+                <Person  />
+                </div>
+                  </div>
            </div>
-         
-            
       </body>
     </Layout>
      
@@ -73,6 +80,8 @@ export const pageQuery = graphql` query homeQuery {
         thumbnail {
           gatsbyImageData(width: 600)
         }
+        githubUrl
+        websiteUrl
       }
     }
   }

@@ -1,26 +1,10 @@
-import { graphql, Link, useStaticQuery } from "gatsby"
-import React, { useState } from "react"
+import { Link } from "gatsby"
+import React from "react"
 
 
 const Nav = () => {
-
-  const { site } = useStaticQuery(graphql`
-    query {
-      site {
-        data: siteMetadata {
-          menu {
-            name
-            to
-          }
-        }
-      }
-    }`)
-
  
   return (
-    
-      
-    
       <ul >
         <li>
         <Link class="navtext" activeClassName="navtextActive" to="/">Home</Link>
@@ -30,16 +14,6 @@ const Nav = () => {
       <Link class="navtext" activeClassName="navtextActive" to="/blog">Blog</Link>
       </li>
       </ul>
-      
-      
-      
-      
-
-
-
-
-
-
 
 )};
       

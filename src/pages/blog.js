@@ -13,18 +13,19 @@ const Blogindex = ({ data }) =>  {
     return(
 
       <Layout>
-        <div><p className="text-3xl font-bold text-center py-20">Blog</p></div>
-        <div className="flex justify-center ">
+        
           
-          <div className="w-full lg:w-1/2 pb-40 flex justify-evenly">
+        <div className="blog-post-container">
+        <div><h1 className="blog-title">Blog</h1></div>
+          <div className="blog-post-cards">
                 {data.allContentfulBlog.edges.map( ({ node }) =>  (
-                  <div className="w-full  bg-white my-6 hover:shadow-xl rounded-lg flex justify-around " key={node.id}>
-                      <div>
-                      <p className="text-xl">{node.title}     {node.createdAt}</p>
+                  <div className="single-blog-post" key={node.id}>
+                      <div className="summary">
+                      <p>{node.title}     {node.createdAt}</p>
                       <p>{node.summary}</p>
                       </div>
                       <Link to={`/blog/${node.slug}`}>
-                      <GatsbyImage image={node.thumbnail.gatsbyImageData} />
+                      <GatsbyImage image={node.thumbnail.gatsbyImageData} className="blog-image" />
                       </Link>
                       
                       
@@ -54,7 +55,7 @@ export const pageQuery = graphql` query blogQuery {
           title
           summary
           thumbnail {
-            gatsbyImageData(width: 300)
+            gatsbyImageData(width: 600)
           }
         }
       }

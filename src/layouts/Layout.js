@@ -1,10 +1,9 @@
-  
 import PropTypes from "prop-types"
 import React from "react"
 import Footer from "../components/footer/Footer"
 import Header from "../components/header/Header"
 
-import Pattern from "../assets/pattern1.svg"
+
 
 const Layout = ({ children }) => {
   return (
@@ -17,7 +16,7 @@ const Layout = ({ children }) => {
            
             
       
-        <div className="footer"><Footer /></div>
+        <Footer />
             
    </div>
   )
