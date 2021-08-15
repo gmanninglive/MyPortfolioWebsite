@@ -2,8 +2,6 @@ import React from 'react';
 import './style.scss'
 
 export default function Person(){
-
-
     return (
         <svg width="319" height="180" viewBox="0 0 319 180" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="coding" clip-path="url(#clip0)">
@@ -63,6 +61,5 @@ export default function Person(){
 </svg>
 
         
-        
-        )
+)
 }

@@ -1,32 +1,16 @@
 import React from "react";
+
 import Socials from "../Socials"
+import './styles.scss'
 
-
-const Footer = () =>{
-
-
-
-
-
-
-
-
-
-
+export default function Footer() {
     return(
         <div class= "footer">
-                    <p class="footertext">
-                      &copy; 2021 George Manning. All rights reserved.
-                      {/* <br /> Website by George Manning. */}
-                      </p>
-
-                      <Socials />
-      
-    </div>
-        
-        
-        
-        )
+            <p class="footertext">
+                &copy; 2021 George Manning. All rights reserved.
+            </p>
+                
+        </div>
+          
+    )
 }
-
-export default Footer;

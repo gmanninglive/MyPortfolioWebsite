@@ -1,37 +1,21 @@
 import React from "react"
-import { FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa"
+import { SiGithub } from "react-icons/si"
 
 const Socials = () => {
-  const links = { facebook: "https://www.facebook.com/",
-      instagram: "https://www.instagram.com/",
-      twitter: "https://twitter.com/",
-      linkedin: "https://linkedin.com/in/",}
+  const links = { 
+      github: "https://github.com/gmanninglive",}
  
-//   } = useStaticQuery(graphql`
-//     query SocialQuery {
-//       site {
-//         meta: siteMetadata {
-//           links {
-//             instagram
-//             twitter
-//             linkedin
-//           }
-//         }
-//       }
-//     }
-//   `)
-
   return (
       <ul className="socials-container">
-        <SocialLink href={links.linkedin} icon={FaLinkedin} label="Linkedin" />
-        <SocialLink href={links.instagram} icon={FaInstagram} label="Instagram"/>
-        <SocialLink href={links.twitter} icon={FaTwitter} label="Twitter" />
-        
+        {/* <SocialLink href={links.linkedin} icon={FaLinkedin} label="Linkedin" />
+        <SocialLink href={links.instagram} icon={FaInstagram} label="Instagram"/> */}
+        <SocialLink href={links.github} icon={SiGithub} label="Github" />
       </ul>
   )
 }
 
-const SocialLink = ({ href, label, icon: Icon }) => {
+const SocialLink = ({ href, label, icon: Icon , size}) => {
+  const iconSize = {size}
   return (
     <li className="social-link">
       <a
@@ -40,7 +24,7 @@ const SocialLink = ({ href, label, icon: Icon }) => {
         rel="noreferrer noopener"
       >
         <span className="screen-reader-only">{label}</span>
-        <Icon className="w-5 h-5 fill-current" />
+        <Icon  />
       </a>
     </li>
   )

@@ -1,31 +1,36 @@
 import React from 'react';
 import {Link, graphql } from'gatsby'
-import { GatsbyImage }  from 'gatsby-plugin-image/';
+import  SyntaxHighlighter  from 'react-syntax-highlighter';
+import { a11yLight } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+
 
 
 import Layout from '../layouts/Layout';
 
-
 const Blogindex = ({ data }) =>  {
     
-    console.log(data)
+    const blogPosts = data.allContentfulBlog.edges;
 
     return(
 
-      <Layout>
-        
-          
-        <div className="blog-post-container">
-        <div><h1 className="blog-title">Blog</h1></div>
+      <Layout> 
+        <div className="blogcard-container">
+           <div><h1 className="page-title">Blog</h1></div>
           <div className="blog-post-cards">
-                {data.allContentfulBlog.edges.map( ({ node }) =>  (
+                {blogPosts.map( ({ node }) =>  (
                   <div className="single-blog-post" key={node.id}>
                       <div className="summary">
-                      <p>{node.title}     {node.createdAt}</p>
+                      <h3>{node.title} <br/>{node.createdAt}</h3>
                       <p>{node.summary}</p>
                       </div>
-                      <Link to={`/blog/${node.slug}`}>
-                      <GatsbyImage image={node.thumbnail.gatsbyImageData} className="blog-image" />
+                 
+                      <Link to={`/blog/${node.slug}`} >
+                      {node.codeThumbnail? <SyntaxHighlighter className="blogpost-thumbnail" style={a11yLight}
+                              language="javascript" 
+                              showLineNumbers="true" wrapLongLines="true">
+                      
+                               {node.codeThumbnail.codeThumbnail }
+                            </SyntaxHighlighter> : <div></div> }            
                       </Link>
                       
                       
@@ -54,6 +59,9 @@ export const pageQuery = graphql` query blogQuery {
           createdAt(locale: "en-gb", formatString: "MMM Do YY")
           title
           summary
+          codeThumbnail {
+            codeThumbnail
+          }
           thumbnail {
             gatsbyImageData(width: 600)
           }

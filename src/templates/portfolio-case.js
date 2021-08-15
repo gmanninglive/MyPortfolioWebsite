@@ -4,11 +4,7 @@ import { graphql } from 'gatsby';
 import Layout from "../layouts/Layout"
 import RichText from "../components/RichText"
 
-
-
 const Template = ({data: { portfolio }}) => {
-  
-  
 return (
 
   <Layout>
@@ -22,20 +18,10 @@ return (
                       {/* <GatsbyImage image={portfolio.thumbnail.gatsbyImageData} alt="image" /> */}
                         </div>
                         <RichText content={portfolio.body} />
-                        
-                        
-            
-        
     </div>
   </Layout>
-
-
   )
 }
-
-
-
-
 export default Template;
 
 export const query = graphql` query($slug: String!) {

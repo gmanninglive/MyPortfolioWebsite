@@ -1,0 +1,43 @@
+.colorTheme{
+    transition: .3s ease-in-out;
+  
+}
+.darkTheme{
+    @extend .colorTheme;
+    --primary: #0A014F;
+        --secondary: #FFF;
+        --color1 : #00F0B5;
+        --color2 : #D14081;
+        --color3 : #F5E960;
+        --color4 : #0A014F;
+        --color5 : #4C5760;
+        --color6 : #ffe9f3;
+
+        
+        --light:var(--color1);
+
+        --white-shadow: 0px 0 30px 0 rgba(255, 255, 255, 0.61), 0 4px 6px -2px rgba(255, 255, 255, 0.692);
+        --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        --primary-shadow:  var(--tw-shadow);
+        --secondary-shadow:  var(--white-shadow);
+    
+}
+.lightTheme{
+    @extend .colorTheme;
+        --primary: #FFF;
+        --secondary: #0A014F;
+        --color1 : #00F0B5;
+        --color2 : #D14081;
+        --color3 : #F5E960;
+        --color4 : #0A014F;
+        --color5 : #4C5760;
+        --color6 : #ffe9f3;
+        --light:var(--color4);
+
+        --white-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.61), 0 4px 6px -2px rgba(255, 255, 255, 0.692);
+        --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        --primary-shadow:  var(--tw-shadow);
+        --secondary-shadow:  var(--tw-shadow);
+        
+
+}

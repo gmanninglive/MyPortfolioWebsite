@@ -1,10 +1,8 @@
 import React from "react";
 import { graphql } from 'gatsby';
+
 import Layout from "../layouts/Layout"
-import { GatsbyImage } from "gatsby-plugin-image";
 import BlogBody from "../components/RichText"
-
-
 
 const Template = ({data: { blog }}) => {
   
@@ -13,30 +11,27 @@ const Template = ({data: { blog }}) => {
 return (
 
   <Layout>
-    <div className="py-6">
-          <div className="text-4xl font-extrabold py-2">{blog.title}</div>
-            <div className="flex justify-between">
-              {/* <p className= "text-xl font-semibold">{blog.summary}</p> */}
-                <p className= "font-semibold">{`Post date:${date}`}</p>
-                  </div>
-                    <div className= "container flex justify-center py-6"> 
-                      <GatsbyImage image={blog.thumbnail.gatsbyImageData} alt="image" />
-                        </div>
-                        <BlogBody content={blog.body} />
-                        
-                        
-            
-        
+    
+    <div className="container">
+    <h1 className="page-title">Blog</h1>
+    <div className="blogpost-container">
+    
+          <div className="blogtitle">
+            <h2>{blog.title}</h2>
+              <b>
+                {`Post date:${date}`}
+              </b>
+          </div>
+          <div className="blogsection-2"><BlogBody content={blog.body} />
+          {/* <SyntaxHighlighter className="code" language="javascript" style={atomDark} showLineNumbers="true" wrapLongLines="true">{blog.codeblock.codeblock}</SyntaxHighlighter> */}
+          </div>
+                               
+          
+    </div>
     </div>
   </Layout>
-
-
   )
 }
-
-
-
-
 export default Template;
 
 export const query = graphql` query($slug: String!) {
@@ -48,6 +43,7 @@ export const query = graphql` query($slug: String!) {
         thumbnail {
           gatsbyImageData
         }
+        codeblock{codeblock}
         body {
           raw
     }

@@ -1,0 +1,34 @@
+.footer{       
+    width: 100%;
+    display: inline-flex;
+    justify-items: flex-end;
+    justify-content: space-between;
+    margin: 0;
+    background-color: var(--primary);
+    .footertext{
+        color: var(--secondary);
+        padding: 1em;
+      }
+  }
+  .socials-container{
+      padding: 0em;
+  }
+
+  .social-link{
+    display: inline-block;
+    padding-left: 2em;
+    a{
+    color: var(--secondary);
+    }
+    .screen-reader-only{
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+    }
+  }

@@ -1,24 +1,37 @@
 import PropTypes from "prop-types"
 import React from "react"
+
 import Footer from "../components/footer/Footer"
 import Header from "../components/header/Header"
-
+import { ThemeContext } from '../context/ThemeProvider';
+import './styles.scss'
 
 
 const Layout = ({ children }) => {
   return (
-    <div className="layout">
-            <Header />
+    <ThemeContext.Consumer>
+      {context => (
+        <React.Fragment>
             
-                <div className="container">{children}</div>
+          <div className={context.isDark ? 'darkTheme' : 'lightTheme'}>
+          <div className="layout">
+            <Header className="header" />
+            
+                {children}
                 
           
            
             
       
-        <Footer />
+            <Footer />
             
-   </div>
+          </div>
+         
+          </div>
+        </React.Fragment>
+      )}
+    
+    </ThemeContext.Consumer>
   )
 }
 
@@ -28,3 +41,10 @@ Layout.propTypes = {
 }
 
 export default Layout
+
+
+
+
+   
+      
+ 
