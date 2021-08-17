@@ -7,7 +7,7 @@ import { ThemeContext } from '../context/ThemeProvider';
 import './styles.scss'
 
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
   return (
     <ThemeContext.Consumer>
       {context => (
@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
             
           <div className={context.isDark ? 'darkTheme' : 'lightTheme'}>
           <div className="layout">
-            <Header className="header" />
+            <Header className="header" location ={location}/>
             
                 {children}
                 

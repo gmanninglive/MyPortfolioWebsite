@@ -7,13 +7,13 @@ import { a11yLight } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 import Layout from '../layouts/Layout';
 
-const Blogindex = ({ data }) =>  {
+const Blogindex = ({ data, location }) =>  {
     
     const blogPosts = data.allContentfulBlog.edges;
 
     return(
 
-      <Layout> 
+      <Layout location={location}> 
         <div className="blogcard-container">
            <div><h1 className="page-title">Blog</h1></div>
           <div className="blog-post-cards">

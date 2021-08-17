@@ -159,8 +159,11 @@
     padding-top: 4em;
     height: 100vh;
     background-color: var(--primary);
+
+    @media (max-width: 600px){
+        height:100%;
+    }
     .blog-post-cards{ 
-        
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;

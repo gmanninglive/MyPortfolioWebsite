@@ -10,12 +10,12 @@ import Skills from '../components/skills/Skills'
 import Contact from '../components/contact/contact';
 
 
-const index = ({ data }) =>{
+const index = ({ data, location }) =>{
  
   const portfolio = data.allContentfulPortfolio.edges;
 
   return (
-    <Layout><div className="index-container">
+    <Layout location={location}><div className="index-container">
            <div className="hero">
            <div className="page-title">./Portfolio</div>
               <span className="intro">

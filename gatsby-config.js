@@ -12,8 +12,8 @@ module.exports = {
     menu:[
       { name: "Home", to: "/" },
       { name: "About", to: "/about" },],
-    siteUrl: "https://gmanningdev.uk",
-    title: "My Portfolio",
+      siteUrl: "https://gmanningdev.uk",
+      title: "My Portfolio",
   },
   plugins: [
       `gatsby-plugin-postcss`,

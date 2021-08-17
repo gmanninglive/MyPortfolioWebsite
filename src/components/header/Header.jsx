@@ -4,14 +4,14 @@ import { ThemeContext } from '../../context/ThemeProvider';
 import {FaRegLightbulb, FaLightbulb } from 'react-icons/fa';
 import './header.scss';
 
-const Header = () =>{
+const Header = ({location}) =>{
     return(
         <ThemeContext.Consumer>
             {context => (
         <div className= "headerContainer">
             <div className="nav">
                 
-                    <Nav />
+                    <Nav location={location} />
                     <button className="theme-select" 
                     href="#" onClick={() => 
                     context.changeTheme()}>
