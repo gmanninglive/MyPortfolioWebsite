@@ -15,9 +15,9 @@ export default function Project ({ portfolioCase }) {
         <div className= "singleportfoliocard" >
             <div className="summary">
                 <h2>{portfolioCase.title}</h2>
-                    <p class="">{portfolioCase.summary.summary}</p>
+                    <p>{portfolioCase.summary.summary}</p>
                     <div className="links-container">
-                            <GitLink url={portfolioCase.githubUrl} />
+                            <GitLink url={portfolioCase.githubUrl} size={48} />
                             <WebLink 
                             url={portfolioCase.websiteUrl} 
                             />

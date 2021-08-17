@@ -21,7 +21,16 @@
     }
 
     .contact-details{
-        display: block;
+        display: grid;
+        text-align: center;
+        span{
+            color: var(--secondary);
+        :hover{color: var(--color1);
+                transition: ease-in-out 0.3s;}}
+        .email{
+            margin-bottom: 0.5rem;
+        }
+        
     }
 
     

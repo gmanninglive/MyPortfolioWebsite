@@ -10,7 +10,7 @@ export default function Projects ({ portfolioCases }) {
         <div className="portfolio-container">  
             <div className="portfolio-title">./Projects</div>
               {portfolioCases.map( ( {node} ) =>  (
-                  <div class="portfolio-card-wrapper" key={node.id}>
+                  <div className="portfolio-card-wrapper" key={node.id}>
                       <Project portfolioCase={node} /> 
                      </div>
                  ))}

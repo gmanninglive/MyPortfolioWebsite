@@ -84,7 +84,7 @@
         grid-column: 1;
         width: 100%;
         padding: 0 0 0 2rem;
-        line-height: 0rem;
+        line-height: 0.5rem;
             
         p{font-size: 1.5rem;}
         h1{font-size: 6rem;
@@ -96,25 +96,19 @@
                 font-size: 3rem;
                 line-height: 1rem;}
         }
-        @media (min-width: 780px) {
-           line-height: 0.25rem;
-        }
-
         #name{
             width: 100%;
             color: var(--secondary);
-            line-height: 0.5rem;
         }
        
         #welcome{
             width: 100%;
             color: var(--color1);
-            line-height: 0rem;
         }
         #portfolio{
             width: 100%;
             color: var(--color2); 
-            line-height: 0.5rem;          
+          
         }
 
     }
@@ -163,6 +157,7 @@
 .blogcard-container{
     display: grid;
     padding-top: 4em;
+    height: 100vh;
     background-color: var(--primary);
     .blog-post-cards{ 
         
@@ -181,7 +176,7 @@
             
             box-shadow: var(--secondary-shadow);
 
-            @media(max-width:600px){ width: fit-content;}
+            @media(max-width:600px){ width: 95%;}
 
             .summary{
                 padding: 1em;
