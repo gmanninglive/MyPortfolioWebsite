@@ -1,7 +1,6 @@
 
 @import url(./theme.scss);
     
-
 :root{
     display: block;
     margin: 0;
@@ -10,6 +9,8 @@
     font-family:  'Roboto', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI',  sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
     
     body{
         margin:0;
@@ -43,10 +44,15 @@
     }
     
 }
+
+#one{
+    scroll-snap-align: start;
+}
+
 .index-container{
     position: relative;
     height: 100%;
-    scroll-snap-type: y mandatory;
+    
 }
 .container{
     display: flex;
@@ -156,7 +162,7 @@
 
 .blogcard-container{
     display: grid;
-    padding-top: 4em;
+    padding-top: 5em;
     height: 100vh;
     background-color: var(--primary);
 

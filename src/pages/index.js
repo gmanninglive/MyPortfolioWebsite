@@ -15,7 +15,7 @@ const index = ({ data, location }) =>{
   const portfolio = data.allContentfulPortfolio.edges;
 
   return (
-    <Layout location={location}><div className="index-container">
+    <Layout location={location}><div className="index-container" id="one">
            <div className="hero">
            <div className="page-title">./Portfolio</div>
               <span className="intro">
@@ -24,11 +24,14 @@ const index = ({ data, location }) =>{
                   <h1 id="portfolio">Developer</h1>
               </span>
            </div>
-
-            <Projects portfolioCases={portfolio} />
-
-            <Skills />
-            <Contact />
+            <div>
+            <Projects id="two" portfolioCases={portfolio} />
+            </div>
+            
+            <Skills  />
+            </div>
+            <div>
+            <Contact id="four" />
             </div>
     </Layout>
     

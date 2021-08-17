@@ -8,8 +8,9 @@ const Template = ({data: { portfolio }}) => {
 return (
 
   <Layout>
-    <div className="py-6 ">
-          <div className="text-4xl font-extrabold py-2">{portfolio.title}</div>
+    <div className="container">
+      <h1 className="page-title">./Portfolio</h1>
+          <h1>{portfolio.title}</h1>
             <div className="flex justify-between">
               {/* <p className= "text-xl font-semibold">{portfolio.summary}</p> */}
 

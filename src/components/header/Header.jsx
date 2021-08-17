@@ -1,29 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import Nav  from "../nav/Nav";
 import { ThemeContext } from '../../context/ThemeProvider';
-import {FaRegLightbulb, FaLightbulb } from 'react-icons/fa';
+import {FaRegLightbulb, FaLightbulb, } from 'react-icons/fa';
+
 import './header.scss';
 
 const Header = ({location}) =>{
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+
     return(
-        <ThemeContext.Consumer>
-            {context => (
+        <div>
+            
         <div className= "headerContainer">
             <div className="nav">
-                
-                    <Nav location={location} />
+                     <Nav isMenuOpen={isMenuOpen} 
+                        setIsMenuOpen={setIsMenuOpen} 
+                        location={location} />
+                    <ThemeContext.Consumer>{context => (
                     <button className="theme-select" 
                     href="#" onClick={() => 
                     context.changeTheme()}>
                     {context.isDark ? 
                     <FaRegLightbulb size={36} /> : 
                     <FaLightbulb size={36} />}
-                    </button>
+                    </button>)}
+                    </ThemeContext.Consumer>
+                    
             </div>
             
         </div>
-            )}
-        </ThemeContext.Consumer>
+            
+        </div>
     )
 }
 

@@ -1,12 +1,12 @@
 
 .skillsContainer{
+    scroll-snap-align: start;
     position: relative;
     display: block;
     height: 100vh;
     width: 100%;
     padding: 5em 0 0 0;
     background-color: var(--primary);
-    scroll-snap-align: start;
     .skills-grid{
         width: 100%;
         display: grid;

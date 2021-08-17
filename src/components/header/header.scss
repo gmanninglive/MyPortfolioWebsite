@@ -8,13 +8,35 @@
     background-color: transparent;
     
     z-index: 100;
-
+   
     .nav{
         display: inline-flex;
         justify-content: flex-end;
         grid-column: 2;
         padding-top: 1em;
         transition: .3s ease-in-out;
+
+        .desktop-menu{
+            display: none;
+            
+
+            @media (min-width: 600px){display: inline-flex;
+            }
+
+        }
+
+        .menu-button{
+            display: none;
+            
+
+            @media (max-width: 600px){display: block;
+                justify-content: flex-end;
+               border-style: none;
+                background-color: transparent;
+                color: var(--secondary)
+               
+            }
+        }
         
 
         .theme-select{
@@ -28,7 +50,7 @@
         }
     
     ul{
-        display: inline-flex;
+        
         line-height: 1em;
         list-style-type: none;
         padding: 0;

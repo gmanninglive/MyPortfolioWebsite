@@ -18,24 +18,23 @@ const Blogindex = ({ data, location }) =>  {
            <div><h1 className="page-title">Blog</h1></div>
           <div className="blog-post-cards">
                 {blogPosts.map( ({ node }) =>  (
-                  <div className="single-blog-post" key={node.id}>
+                  <Link to={`/blog/${node.slug}`} className="single-blog-post" key={node.id}>
+              
                       <div className="summary">
                       <h3>{node.title} <br/>{node.createdAt}</h3>
                       <p>{node.summary}</p>
                       </div>
                  
-                      <Link to={`/blog/${node.slug}`} >
+                      
                       {node.codeThumbnail? <SyntaxHighlighter className="blogpost-thumbnail" style={a11yLight}
                               language="javascript" 
                               showLineNumbers="true" wrapLongLines="true">
                       
                                {node.codeThumbnail.codeThumbnail }
                             </SyntaxHighlighter> : <div></div> }            
-                      </Link>
                       
-                      
-            
-                     </div>
+                     
+                     </Link>
                  ))}
 
           </div>

@@ -21,6 +21,7 @@
         --primary-shadow:  var(--tw-shadow);
         --secondary-shadow:  var(--white-shadow);
     
+    
 }
 .lightTheme{
     @extend .colorTheme;
@@ -38,6 +39,7 @@
         --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         --primary-shadow:  var(--tw-shadow);
         --secondary-shadow:  var(--tw-shadow);
+       
         
 
 }

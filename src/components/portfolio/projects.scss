@@ -1,6 +1,6 @@
 .portfolio-container{
     position: relative;
-    scroll-snap-align: start;
+    
     height: 100%;
     width: 100%;
     background-color: var(--color6);
@@ -28,6 +28,7 @@
         font-size: 3rem;
         font-weight: 900;
         transition: .3s ease-in-out;
+        
     }
     
     .portfolio-card-wrapper{
@@ -36,6 +37,7 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        scroll-snap-align: start;
         @media (min-width: 980px){
             height: 100vh;
         }
