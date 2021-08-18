@@ -3,12 +3,13 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby'
 
 
-import CaseStudyButton from '../buttons/CaseStudyButton';
+// import CaseStudyButton from '../buttons/CaseStudyButton';
 import WebLink from '../buttons/WebLink';
 import GitLink from '../buttons/GitLink';
 
 
 export default function Project ({ portfolioCase }) {
+   
       return (
         <div className="portfoliocards">
         <div className="project-number">{portfolioCase.order}</div>
@@ -18,10 +19,11 @@ export default function Project ({ portfolioCase }) {
                     <p>{portfolioCase.summary.summary}</p>
                     <div className="links-container">
                             <GitLink url={portfolioCase.githubUrl} size={48} />
-                            <WebLink 
+                            {portfolioCase.websiteUrl ? <WebLink 
                             url={portfolioCase.websiteUrl} 
-                            />
-                        <CaseStudyButton url={`/portfolio/${portfolioCase.slug}`}/>
+                            />: <div></div>}
+                            
+                        {/* <CaseStudyButton url={`/portfolio/${portfolioCase.slug}`}/> */}
                     </div>
             </div>
                 <div>

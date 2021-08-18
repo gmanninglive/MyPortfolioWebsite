@@ -1,46 +1,12 @@
 
-.skillsContainer{
+.skills-container{
     scroll-snap-align: start;
     position: relative;
     display: block;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     padding: 5em 0 0 0;
     background-color: var(--primary);
-    .skills-grid{
-        width: 100%;
-        display: grid;
-        text-align: center;
-        row-gap: 4em;
-    
-        
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        .item-1{
-            grid-column: 2 ;
-            grid-row: 1 / 1;
-        }
-        .item-2{
-            grid-column: 3 ;
-            grid-row: 1 / 1;
-        }
-        .item-3{
-            grid-column: 4 ;
-            grid-row: 1 / 1;
-        }
-        .item-4{
-            grid-column: 2;
-            grid-row: 2 / 2;
-        }
-        .item-5{
-            grid-column: 3;
-            grid-row: 2 / 2;
-        }
-        .item-6{
-            grid-column: 4;
-            grid-row: 2;
-        }
-    }
     
     .skills-title{
         position: absolute;
@@ -56,7 +22,57 @@
     }
     
     ul{
-        list-style-type: none;
         font-size: 1.5em;
+        line-height: 2rem;
+    }
+}
+
+.skills-description{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    text-align: center;
+    margin-bottom: 4rem;
+    .skills-text{
+        display: grid;
+        text-align: start;
+        margin-top: 2rem;
+        p{
+            line-height: 1.25rem;
+        }
+    }
+    
+    .card-wrapper{
+        
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        
+        .skills-card{
+            display: grid;
+            text-align: center;
+            background-color: var(--secondary);
+            color:var(--primary);
+            
+            @media (max-width: 600px){width: 80%;}
+            margin: 1rem 0;
+            
+            @media (min-width: 601px){width: 50%;}
+            @media (min-width: 900px){width: 25%;
+                margin: 1rem;}
+            
+            list-style: circle;
+            padding: 0 2rem 2rem 0;
+            border-radius: 2em;
+            box-shadow: var(--primary-shadow);
+            .skills-icons{
+                display: flex;
+                justify-content: space-evenly;
+                margin:1rem;
+            }
+        }
     }
 }

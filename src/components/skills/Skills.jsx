@@ -1,40 +1,38 @@
 import React from 'react';
-import {SiJavascript, 
-    SiNodeDotJs, 
-    SiGatsby, 
-    SiNextDotJs, 
-    SiReact, SiCsharp,
-    } from 'react-icons/si';
+
+import Backend from './Backend';
+import Deployment from './Deployment';
+import Frontend from './Frontend';
 
 import './skills.scss';
 
 const Skills = () => {
     return(
-        <div className="skillsContainer">
+        <div className="skills-container">
               <div className="skills-title">
               ./Skills
-              </div>
-                    <div className="skills-grid">
-                      <div className="item-1">
-                        <SiNodeDotJs  size={48} /> {/*color="#339933"*/}
+              </div><div className="skills-description">
+                        <div className="skills-text">
+                          <h5>
+                            I have been diving into the latest tools & tech. Here's a short list of what I have been learning and working with recently
+                          </h5>
+                    </div>
+                    <div className="card-wrapper">
+                      <Frontend />
+                      <Backend />
+                      <Deployment />
                       </div>
-                      <div className="item-2">
-                        <SiJavascript  size={48} /> {/*color="#F7DF1E"*/}
-                      </div>
-                      <div className="item-3">
-                        <SiReact  size={48} /> {/*color="#61DAFB"*/}
-                      </div>
-                      <div className="item-4">
-                        <SiGatsby  size={48} /> {/*color="#663399"*/}
-                      </div>
-                      <div className="item-5">
-                        <SiNextDotJs size={48} />
-                        </div>
-                      <div className="item-6">
-                        <SiCsharp size={48} />
-                        </div>
+                      <div className="skills-text">
+                        <p>
+                          I am really enjoying the functionality and re-usability of React components, coupled with the speed of the JAMstack/ serverless architectures.
+                          <br/><br/>
+                          I plan to gain more experience with cloud platforms over the coming months.
+                        </p>
+                    </div>
                   </div>
-           </div>
+                </div>
+                  
+         
     )
 }
 

@@ -21,8 +21,12 @@ return (
               <b>
                 {`Post date:${date}`}
               </b>
+              
           </div>
-          <div className="blogsection-2"><BlogBody content={blog.body} />
+          
+          <div className="blogsection-2">
+          <hr/>
+          <BlogBody content={blog.body} />
           {/* <SyntaxHighlighter className="code" language="javascript" style={atomDark} showLineNumbers="true" wrapLongLines="true">{blog.codeblock.codeblock}</SyntaxHighlighter> */}
           </div>
                                
@@ -40,9 +44,6 @@ export const query = graphql` query($slug: String!) {
        
         title
         createdAt(locale: "en-gb", formatString: "MMM Do YY")
-        thumbnail {
-          gatsbyImageData
-        }
         codeblock{codeblock}
         body {
           raw

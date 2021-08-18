@@ -34,6 +34,7 @@ const options = {
   renderMark: {
     [MARKS.BOLD]: text => <b>{text}</b>,
     [MARKS.CODE]: text => <SyntaxHighlighter className="inlinecode" language="javascript" style={atomDark} wrapLongLines="true">{text}</SyntaxHighlighter>
+    
   },
 
   renderNode: {
@@ -44,6 +45,7 @@ const options = {
     [BLOCKS.HEADING_3]: (node, children) => <h3 >{children}</h3>,
     [BLOCKS.HEADING_2]: (node, children) => <h2 >{children}</h2>,
     [BLOCKS.HEADING_1]: (node, children) => <h1 >{children}</h1>,
+    [BLOCKS.HR]: (node) => <hr />,
     [BLOCKS.EMBEDDED_ASSET]: node => {
         
         const asset = ContentfulImage(node.data.target.sys.id)

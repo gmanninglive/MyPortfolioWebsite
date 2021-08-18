@@ -15,7 +15,7 @@ const Socials = () => {
 }
 
 const SocialLink = ({ href, label, icon: Icon , size}) => {
-  const iconSize = {size}
+  
   return (
     <li className="social-link">
       <a
@@ -24,7 +24,7 @@ const SocialLink = ({ href, label, icon: Icon , size}) => {
         rel="noreferrer noopener"
       >
         <span className="screen-reader-only">{label}</span>
-        <Icon  />
+        <Icon size={size}  />
       </a>
     </li>
   )

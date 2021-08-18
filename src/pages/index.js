@@ -40,7 +40,7 @@ const index = ({ data, location }) =>{
 export default index;
 
 export const pageQuery = graphql` query homeQuery {
-   allContentfulPortfolio(sort: { fields: [createdAt], order: DESC }) {
+   allContentfulPortfolio(sort: {fields: order})  {
     edges {
       node {
         id

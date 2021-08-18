@@ -6,7 +6,7 @@ import './styles.scss'
 
 const Overlay = ( props ) => {
 
-    const{ IsMenuOpen, setIsMenuOpen } = props
+    const{ setIsMenuOpen } = props
 
     return(
         <div className="overlay">

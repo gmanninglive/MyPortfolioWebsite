@@ -32,8 +32,6 @@ const Blogindex = ({ data, location }) =>  {
                       
                                {node.codeThumbnail.codeThumbnail }
                             </SyntaxHighlighter> : <div></div> }            
-                      
-                     
                      </Link>
                  ))}
 
@@ -60,9 +58,6 @@ export const pageQuery = graphql` query blogQuery {
           summary
           codeThumbnail {
             codeThumbnail
-          }
-          thumbnail {
-            gatsbyImageData(width: 600)
           }
         }
       }
