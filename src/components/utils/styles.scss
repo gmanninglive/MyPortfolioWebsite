@@ -1,0 +1,25 @@
+#arrows{fill:var(--secondary);
+    stroke:var(--secondary);
+}
+#toparrow{ animation: arrowMove 2s infinite ease-in-out ;
+   
+
+}
+@keyframes arrowMove {
+    
+    
+     0%{
+        
+        transform: translateY(0);
+      }
+      
+      50% {
+        transform: translateY(20%);
+      }
+      0%{
+        
+        transform: translateY(0);
+      }
+      
+
+}

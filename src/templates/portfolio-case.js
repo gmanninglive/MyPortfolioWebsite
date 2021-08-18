@@ -18,7 +18,10 @@ return (
                     <div className= "container flex justify-center py-6"> 
                       {/* <GatsbyImage image={portfolio.thumbnail.gatsbyImageData} alt="image" /> */}
                         </div>
-                        <RichText content={portfolio.body} />
+                        {portfolio.body? <RichText content={portfolio.body} />
+                        :
+                        <div></div>}
+                        
     </div>
   </Layout>
   )

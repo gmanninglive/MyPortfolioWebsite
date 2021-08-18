@@ -8,6 +8,7 @@ import Layout from '../layouts/Layout';
 import Projects from '../components/portfolio/Projects';
 import Skills from '../components/skills/Skills'
 import Contact from '../components/contact/contact';
+import Arrows from '../components/utils/Arrows';
 
 
 const index = ({ data, location }) =>{
@@ -23,6 +24,9 @@ const index = ({ data, location }) =>{
                   <h1 id="welcome">Web</h1>
                   <h1 id="portfolio">Developer</h1>
               </span>
+              
+                  <Arrows />
+            
            </div>
             <div>
             <Projects id="two" portfolioCases={portfolio} />
