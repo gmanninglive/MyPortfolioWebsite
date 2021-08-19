@@ -84,7 +84,9 @@
             }
 
         .cardImage{
+            @media (max-width:979px){
             border-radius: 0 0 1em 1em;
+            }
             @media(min-width: 980px){border-radius: 0 1em 1em 0;}
             }
            

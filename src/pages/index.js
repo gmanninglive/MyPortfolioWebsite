@@ -24,9 +24,9 @@ const index = ({ data, location }) =>{
                   <h1 id="welcome">Web</h1>
                   <h1 id="portfolio">Developer</h1>
               </span>
-              
+                <div className="arrows">
                   <Arrows />
-            
+                </div>
            </div>
             <div>
             <Projects id="two" portfolioCases={portfolio} />
