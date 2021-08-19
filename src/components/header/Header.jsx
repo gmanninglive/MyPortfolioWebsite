@@ -14,19 +14,20 @@ const Header = ({location}) =>{
             
         <div className= "headerContainer">
             <div className="nav">
+                    <ThemeContext.Consumer>{context => (
+                            <button className="theme-select" 
+                            href="#" onClick={() => 
+                            context.changeTheme()}>
+                            {context.isDark ? 
+                            <FaRegLightbulb size={36} /> : 
+                            <FaLightbulb size={36} />}
+                            </button>)}
+                    </ThemeContext.Consumer>
+
                      <Nav isMenuOpen={isMenuOpen} 
                         setIsMenuOpen={setIsMenuOpen} 
                         location={location} />
-                    <ThemeContext.Consumer>{context => (
-                    <button className="theme-select" 
-                    href="#" onClick={() => 
-                    context.changeTheme()}>
-                    {context.isDark ? 
-                    <FaRegLightbulb size={36} /> : 
-                    <FaLightbulb size={36} />}
-                    </button>)}
-                    </ThemeContext.Consumer>
-                    
+
             </div>
             
         </div>
