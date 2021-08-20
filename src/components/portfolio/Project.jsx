@@ -27,13 +27,13 @@ export default function Project ({ portfolioCase }) {
                     </div>
             </div>
                 <div>
-                    <Link to={`/portfolio/${portfolioCase.slug}`} >
+                    <a href={portfolioCase.websiteUrl} target="_blank" rel="noreferrer" >
                         <GatsbyImage 
                         image={portfolioCase.thumbnail.gatsbyImageData}
                         alt={`${portfolioCase.slug}-image`}
                         className="cardImage" 
                         />
-                    </Link>
+                    </a>
                 </div>
         </div>
         </div>    
