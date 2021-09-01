@@ -1,7 +1,5 @@
 import React from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { Link } from 'gatsby'
-
 
 // import CaseStudyButton from '../buttons/CaseStudyButton';
 import WebLink from '../buttons/WebLink';

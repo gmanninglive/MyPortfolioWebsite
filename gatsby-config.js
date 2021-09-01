@@ -4,16 +4,18 @@ const { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } = process.env
 
 module.exports = {
   siteMetadata: {
-    links: 
-      {email: "gmanningdev@gmail.com",
-        github: "https://github.com/gmanninglive/",
-    },
-    
-    menu:[
-      { name: "Home", to: "/" },
-      { name: "About", to: "/about" },],
+      links:{
+      email: "gmanningdev@gmail.com",
+      github: "https://github.com/gmanninglive/",
+      },
+      menu:[
+        { name: "Home", to: "/" },
+        { name: "Blog", to: "/blog" },],
+      locale: "en",
       siteUrl: "https://gmanningdev.uk",
       title: "My Portfolio",
+      description: "See My latest Software and Web Development Projects, And Check Out My Blog",
+      author: "George Manning"
   },
   plugins: [
       `gatsby-plugin-postcss`,
@@ -21,14 +23,7 @@ module.exports = {
       `gatsby-plugin-sharp`,
       `gatsby-transformer-sharp`,
       `gatsby-plugin-sass`,
-      {
-        resolve: "gatsby-plugin-react-svg",
-        options: {
-          rule: {
-            include: /assets/ // See below to configure properly
-          }
-        }
-      },
+      `gatsby-plugin-react-helmet`,
       {
         resolve: "gatsby-source-contentful",
         options: {
