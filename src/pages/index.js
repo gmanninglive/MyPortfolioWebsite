@@ -1,12 +1,12 @@
 import React from "react";
 import { graphql } from "gatsby";
+import {FiChevronDown } from "react-icons/fi"
 
 import "../styles/global.scss";
 import Layout from "../layouts/Layout";
 import Projects from "../components/portfolio/Projects";
 import Skills from "../components/skills/Skills";
 import Contact from "../components/contact/contact";
-import Arrows from "../components/utils/Arrows";
 import SiteMetadata from "../components/SiteMetaData";
 
 
@@ -25,7 +25,7 @@ const index = ({ data }) => {
             <h1 id="portfolio">Developer</h1>
           </span>
           <div className="arrows">
-            <Arrows />
+            <FiChevronDown size={48} />
           </div>
         </div>
         <div>

@@ -6,7 +6,7 @@
     margin: 0;
     width: 100%;
     height: 100vh;
-    font-family:  'Roboto', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI',  sans-serif;
+    font-family:  'Inter', 'Roboto', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI',  sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
@@ -16,12 +16,12 @@
         margin:0;
         
     }
-    h1{ font-family: 'Exo 2', sans-serif;
+    h1{ font-family: 'Inter', sans-serif;
         font-size: 4rem;
         font-weight: 900;
     }
     h2{ 
-        font-family: 'Exo 2', sans-serif;
+        font-family: 'Inter', sans-serif;
         font-size: 2rem;
         font-weight: 600;
         letter-spacing: 0.05rem;
@@ -98,6 +98,7 @@
             
         p{font-size: 1.5rem;}
         h1{font-size: 6rem;
+            font-weight: 900;
         
         }
 
@@ -124,6 +125,26 @@
     .arrows{
         margin-top: -3rem;
         padding-bottom: 3rem;
+        animation: arrowMove 1.5s infinite ease-in-out ;
+    }
+    
+    @keyframes arrowMove {
+        
+        
+         0%{
+            
+            transform: translateY(0);
+          }
+          
+          50% {
+            transform: translateY(20%);
+          }
+          0%{
+            
+            transform: translateY(0);
+          }
+          
+    
     }
 }
 
